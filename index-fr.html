@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
     <script src="./static/external/MDB-Free_4.19.1/js/jquery.min.js"></script>
@@ -7,38 +7,26 @@
     <link href="./static/external/MDB-Free_4.19.1/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Material Design Bootstrap -->
     <link href="./static/external/MDB-Free_4.19.1/css/mdb.min.css" rel="stylesheet"/>
+    <!-- Font Awesome 5 -->
+    <script defer src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
+    <!-- D3 -->
+    <script src="./static/external/d3.min.js"></script>
   </head>
-  <body>
-    <div class='fixed-top row p-2 white border-bottom-primary'><h1 class='col-10 ml-3'>GeoNewsletter!</h1><a class="float-right col-1" href='https://csbp-cpse.github.io/geo-newsletter/index-en.html'>English</a></div>
-    <div class="container m-5 pt-5">
-      <p>Welcome to the first edition of GeoNewsletter! Designed for Field 5 by the Data Exploration and Integration Lab, approximately each month the latest geomatics publications, technical resources, developments and applications will be delivered. This month’s newsletter contains resources that were curated in effort to bridge the world of geomatics to ongoing projects at Statistics Canada.</p>
-      <p class="note note-primary">As we strive to cater this newsletter for Field 5, please feel free to reach out to Julia Conzon or Marina Smailes with specific topics/themes to include in future releases.
+  <body style='overflow-x:hidden;'>
+    <div class='row p-2 white border-bottom-primary'><h1 class='col-10 ml-3'><i class="fas fa-globe-americas mr-2"></i>GeoNewsletter!</h1><a class="float-right col-1" id="lang" value="fr" href="./index-en.html">English</a></div>
+    <div class="container m-5">
+      <p>Bienvenue à la première édition de la GeoNewsletter ! Conçu pour le Secteur 5 par le Laboratoire d'exploration et d'intégration des données, il vous présente environ chaque mois les dernières publications, ressources techniques, développements et applications en matière de géomatique. Le bulletin de ce mois-ci contient des ressources qui ont été conçues dans le but d'établir un lien entre le monde de la géomatique et les projets en cours à Statistique Canada. </p>
+      <p class="note note-primary">Comme nous nous efforçons d'adapter ce bulletin d'information au Secteur 5, n'hésitez pas à contacter Julia Conzon ou Marina Smailes pour leur proposer des sujets/thèmes spécifiques à inclure dans les prochaines versions.
       </p>
     </div>
     <div class="container m-5">
-      <h1>November 2020</h1>
-      <div class="container m-5">
-        <h2 class=''>Agriculture</h2>
-        <!-- Card -->
-        <div class="card mt-2">
-          <!-- Card content -->
-          <div class="card-body">
-            <!-- Title -->
-            <h3 class="card-title"><a href="https://www.cengn.ca/h2o-geomatics-remote-sensing-to-improve-yields/ " target="_blank">H2O Geomatics: Using Remote Sensing Technology to Improve Farmer’s Yields with NXT Farm</a</h3>
-            <!-- Text -->
-            <p class="card-text">Using Earth-Orbit data, NXT Farm web application notifies users of crop health conditions and offers variable rate fertilization plans. NXT Farm includes both NDVI and custom algorithms that parametrize crop nitrogen levels, water stress, and soil moisture.</p>
-          </div>
-        </div>
-        <div class="card mt-2">
-          <!-- Card content -->
-          <div class="card-body">
-            <!-- Title -->
-            <h3 class="card-title"><a href="https://www.mdpi.com/2072-4292/11/13/1582/htm" target="_blank">Mid-season Crop Classification Using Dual-, Compact-, and Full-Polarization in Preparation for the Radarsat Constellation Mission (RCM)</a</h3>
-            <!-- Text -->
-            <p class="card-text">Comparing crop classification accuracy of varying polarized Synthetic Aperture Radar (SAR) data of Manitoba using pixel- and object-based random forest algorithms.</p>
-          </div>
-        </div>
+      <h1>Topics</h1>
+      <div id="buttons" class="row container">
       </div>
     </div>
+    <div id="articles" class="container m-5">
+    </div>
+    <!-- Custom JS -->
+    <script src="./index.js"></script>
   </body>
 </html> 
