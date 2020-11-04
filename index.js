@@ -4,7 +4,6 @@ function init(){
   var lang = document.getElementById("lang").getAttribute("value");
   var divisions = ['AGRI','EESD','MMWTD','ISTD','RSID','TTD','TECH'];
   
-  $('#articles').append('<h1>November 2020</h1>');
   d3.csv('nov_articles.csv', function(row){
   		// Add "Total Average" value as a map layer
   		if (row["lang"] == lang) {
