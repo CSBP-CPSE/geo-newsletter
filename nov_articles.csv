@@ -1,4 +1,4 @@
-﻿title,description,source,access,date,topic,division,lang,issue
+title,description,source,access,date,topic,division,lang,issue
 H2O Geomatics: Using Remote Sensing Technology to Improve Farmer’s Yields with NXT Farm,"Using Earth-Orbit data, NXT Farm web application notifies users of crop health conditions and offers variable rate fertilization plans. NXT Farm includes both NDVI and custom algorithms that parametrize crop nitrogen levels, water stress, and soil moisture. ",https://www.cengn.ca/h2o-geomatics-remote-sensing-to-improve-yields/ ,,16-Mar-20,AGRI,Agriculture,en,Nov-20
 "Mid-season Crop Classification Using Dual-, Compact-, and Full-Polarization in Preparation for the Radarsat Constellation Mission (RCM)",Comparing crop classification accuracy of varying polarized Synthetic Aperture Radar (SAR) data of Manitoba using pixel- and object-based random forest algorithms.,https://www.mdpi.com/2072-4292/11/13/1582/htm,,03-Jul-20,AGRI,Agriculture,en,Nov-20
 Convolutional Neural Networks May Allow Mapping of Every Tree on Earth,"Advancement in the use of CNNs to detect trees. Case study presented in West Africa. Though notably different than Canada’s geography, general techniques can still be applied.",https://cleantechnica.com/2020/10/20/convolutional-neural-networks-may-allow-mapping-of-every-tree-on-earth/,,20-Oct-20,EESD,Environment & Energy,en,Nov-20
@@ -47,35 +47,3 @@ Vers la géovisualisation axée sur le savoir grâce aux technologies du Web sé
 4 tendances qui feront vraisemblablement croître la demande pour la technologie de cartographie LiDAR à l’échelle mondiale,"Grandes lignes de l’accroissement de la demande pour la technologie LiDAR dans le domaine de la géomatique, notamment pour l’exploitation minière et la gestion.",https://www.geospatialworld.net/blogs/top-4-trends-likely-to-escalate-demand-for-lidar-in-mapping-solutions-worldwide/,,22-Oct-20,TECH,Ressources techniques,fr,Nov-20
 Tout sur le système d’indexation géospatiale H3,"H3, créé par Uber, est un système d’indexation mondial qui utilise un système à grille hexagonale pour contrôler et visualiser des observations selon plusieurs échelles.",https://www.geospatialworld.net/article/unraveled-the-h3-geospatial-indexing-system/,,22-Oct-20,TECH,Ressources techniques,fr,Nov-20
 Balados sur PostGIS ,Vous voulez en savoir plus sur PostGIS? Écoutez ces podcasts dans lesquels Paul Ramsey (un développeur PostGIS) parle de l’utilisation de PostGIS pour gérer et visualiser des données géographiques sur des cartes Web!,http://blog.cleverelephant.ca/2020/10/podcasts.html?utm_source=dlvr.it&utm_medium=twitter,,12-Oct-20,TECH,Ressources techniques,fr,Nov-20
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
