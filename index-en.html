@@ -31,6 +31,27 @@
       <h1>November 2020</h1>
     </div>
     <!-- Custom JS -->
-    <script src="./index.js"></script>
+    <script>
+      var lang = document.getElementById("lang").getAttribute("value");
+      var divisions = ['AGRI','EESD','MMWTD','ISTD','RSID','TTD','TECH'];
+      
+      d3.csv('nov_articles.csv', function(row){
+          // Add "Total Average" value as a map layer
+          if (row["lang"] == lang) {
+            for (var i = 0; i < divisions.length; i++) {
+              if (row["topic"] == divisions[i]) {
+                if (!document.getElementById(divisions[i])) {
+                  $('#articles').append('<h2 class="pt-5" id="'+divisions[i]+'">'+row["division"]+'</h2>');
+                  $('#buttons').append('<a class="p-3 col-2 text-center border" href="#'+divisions[i]+'">'+row["division"]+'</a>');
+                }
+                var card = '<div class="card mt-2"><div class="card-body"><h3 class="card-title">';
+                card += '<a href="'+row["source"]+'" target="_blank">"'+row["title"]+'"</a></h3>'; 
+                card += '<p class="card-text">'+row["description"]+'</p></div></div></div>'
+                $('#articles').append(card);   
+              }  
+            }
+          }
+      });
+    </script>
   </body>
 </html> 
