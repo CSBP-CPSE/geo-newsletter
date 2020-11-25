@@ -1,7 +1,7 @@
 ---
 output: 
   html_document:
-    css: ["./static/external/MDB-Free_4.19.1/css/bootstrap.min.css", "./static/external/MDB-Free_4.19.1/css/mdb.min.css"]
+    css: ["./static/external/MDB-Free_4.19.1/css/bootstrap.min.css", "./static/external/MDB-Free_4.19.1/css/mdb.min.css", "./style.css"]
 ---
 
 ```{r setup, include=FALSE}
@@ -37,7 +37,7 @@ articles <- read.csv('./nov_articles.csv')
 
 template <- "<div class='card mt-2'>
 <div class='card-body'>
-  <div class='card-title'><a href=%s target='_blank'>%s</a></div>
+  <h3 class='card-title'><a href=%s target='_blank'>%s</a></h3>
   <p class='card-text'> %s </p>
 </div></div>
 "
