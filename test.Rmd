@@ -1,0 +1,52 @@
+---
+output: 
+  html_document:
+    css: ["./static/external/MDB-Free_4.19.1/css/bootstrap.min.css", "./static/external/MDB-Free_4.19.1/css/mdb.min.css"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd('C:/Tools/apache-tomcat-10.0.0-M7/webapps/geo-newsletter')
+lang <- "en"
+```
+
+
+```{r echo=FALSE, results='asis'}
+
+if (lang == 'en') {
+    cat("<div class='row p-2 white border-bottom-primary'><h1 class='col-10'>GeoNewsletter!</h1><a class='float-right col-1' id='lang' value='en' href='./index-fr.html'>Français</a>
+<i class='pl-4'>Economic Statistics Field Geomatics Network</i>
+</div>
+<div>
+<p>Welcome to the first edition of GeoNewsletter! Designed for Field 5 by the Data Exploration and Integration Lab, approximately each month the latest geomatics publications, technical resources, developments and applications will be delivered. This month's newsletter contains resources that were curated in effort to bridge the world of geomatics to ongoing projects at Statistics Canada.</p>
+<p class='note note-primary'>As we strive to cater this newsletter for Field 5, please feel free to reach out to Julia Conzon or Marina Smailes with specific topics/themes to include in future releases.
+</p>
+</div>")
+} else {
+    cat("<div class='row p-2 white border-bottom-primary'><h1 class='col-10'>Bulletin d'information géo !</h1><a class='float-right col-1' id='lang' value='fr' href='./index-en.html'>English</a>
+<i class='pl-4'>Réseau géomatique du Secteur de la statistique économique</i>
+</div>
+<div>
+<p>Bienvenue à la première édition de la Bulletin d'information géo ! Conçu pour le Secteur 5 par le Laboratoire d'exploration et d'intégration des données, il vous présente environ chaque mois les dernières publications, ressources techniques, développements et applications en matière de géomatique. Le bulletin de ce mois-ci contient des ressources qui ont été conçues dans le but d'établir un lien entre le monde de la géomatique et les projets en cours à Statistique Canada. </p>
+<p class='note note-primary'>Comme nous nous efforçons d'adapter ce bulletin d'information au Secteur 5, n'hésitez pas à contacter Julia Conzon ou Marina Smailes pour leur proposer des sujets/thèmes spécifiques à inclure dans les prochaines versions.
+</p>
+</div>")
+}
+
+articles <- read.csv('./nov_articles.csv')
+
+template <- "<div class='card mt-2'>
+<div class='card-body'>
+  <div class='card-title'><a href=%s target='_blank'>%s</a></div>
+  <p class='card-text'> %s </p>
+</div></div>
+"
+
+for (i in seq(nrow(articles))) {
+  current <- articles[i, ]
+  if (current$lang == lang)
+    cat(sprintf(template, current$source, current$title, current$description))
+}
+
+   
+```

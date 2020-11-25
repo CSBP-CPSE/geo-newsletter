@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-﻿title,description,source,access,date,topic,division,lang,issue
-=======
 title,description,source,access,date,topic,division,lang,issue
->>>>>>> 519dc89a15d12eedb11d2dbe9e2d00072b7f03b8
 H2O Geomatics: Using Remote Sensing Technology to Improve Farmer’s Yields with NXT Farm,"Using Earth-Orbit data, NXT Farm web application notifies users of crop health conditions and offers variable rate fertilization plans. NXT Farm includes both NDVI and custom algorithms that parametrize crop nitrogen levels, water stress, and soil moisture. ",https://www.cengn.ca/h2o-geomatics-remote-sensing-to-improve-yields/ ,,16-Mar-20,AGRI,Agriculture,en,Nov-20
 "Mid-season Crop Classification Using Dual-, Compact-, and Full-Polarization in Preparation for the Radarsat Constellation Mission (RCM)",Comparing crop classification accuracy of varying polarized Synthetic Aperture Radar (SAR) data of Manitoba using pixel- and object-based random forest algorithms.,https://www.mdpi.com/2072-4292/11/13/1582/htm,,03-Jul-20,AGRI,Agriculture,en,Nov-20
 Convolutional Neural Networks May Allow Mapping of Every Tree on Earth,"Advancement in the use of CNNs to detect trees. Case study presented in West Africa. Though notably different than Canada’s geography, general techniques can still be applied.",https://cleantechnica.com/2020/10/20/convolutional-neural-networks-may-allow-mapping-of-every-tree-on-earth/,,20-Oct-20,EESD,Environment & Energy,en,Nov-20
