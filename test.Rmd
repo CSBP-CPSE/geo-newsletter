@@ -7,52 +7,82 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 setwd('C:/Tools/apache-tomcat-10.0.0-M7/webapps/geo-newsletter')
-lang <- "en"
+lang <- "fr"
+issue <- "20-Dec"
 ```
 
 ```{r echo=FALSE, results='asis'}
 if (lang == 'en') {
-    cat("<div class='row p-2 white border-bottom-primary'><h1 class='col-10'>GeoNewsletter!</h1><a class='float-right col-1' id='lang' value='en' href='./index-fr.html'>Français</a>
-<i class='pl-4'>Economic Statistics Field Geomatics Network</i>
-</div>
+    cat(paste("<div class='row p-2 white border-bottom-primary'><h1 class='col-10'>GeoNewsletter!</h1><div class='col-12'><a class='float-right col-1' id='lang' value='en' href='./index-fr.html'>Français</a>
+<i>Economic Statistics Field Geomatics Network</i>
+</div></div>
 <div>
 <p>Welcome to the first edition of GeoNewsletter! Designed for Field 5 by the Data Exploration and Integration Lab, approximately each month the latest geomatics publications, technical resources, developments and applications will be delivered. This month's newsletter contains resources that were curated in effort to bridge the world of geomatics to ongoing projects at Statistics Canada.</p>
 <p class='note note-primary'>As we strive to cater this newsletter for Field 5, please feel free to reach out to Julia Conzon or Marina Smailes with specific topics/themes to include in future releases.
 </p>
+<p class='note note-warning'>Current version does not work in the default IE browser, please use Chromium or Teams.
+</p>
 </div>
 <input type='radio' id='all' name='categories' value='all' checked>
-<input type='radio' id='cat' name='categories' value='cat'>
-<input type='radio' id='dog' name='categories' value='dog'>
-<input type='radio' id='horse' name='categories' value='horse'>
+<input type='radio' id='agriculture' name='categories' value='agriculture'>
+<input type='radio' id='environment' name='categories' value='environment'>
+<input type='radio' id='industry' name='categories' value='industry'>
+<input type='radio' id='blog' name='categories' value='blog'>
+<input type='radio' id='journal' name='categories' value='journal'>
+<input type='radio' id='news' name='categories' value='news'>
+<input type='radio' id='methods' name='categories' value='methods'>
+<input type='radio' id='visuals' name='categories' value='visuals'>
+<input type='radio' id='data' name='categories' value='data'>
 <ol class='filters'>
-<li>
-<label for='all'>All</label>
-</li>
-<li>
-<label for='cat'>cat</label>
-</li>
-<li>
-<label for='dog'>dog</label>
-</li>
-<li>
-<label for='horse'>horse</label>
-</li>
-</ol>")
+<li><label for='all'>All</label></li>
+<li><label for='agriculture'>agriculture</label></li>
+<li><label for='environment'>environment</label></li>
+<li><label for='industry'>industry</label></li>
+<li><label for='blog'>blog</label></li>
+<li><label for='journal'>journal</label></li>
+<li><label for='news'>news</label></li>
+<li><label for='methods'>methods</label></li>
+<li><label for='visuals'>visuals</label></li>
+<li><label for='data'>data</label></li>
+</ol>", "<h1>", issue,"</h1>"))
 } else {
-    cat("<div class='row p-2 white border-bottom-primary'><h1 class='col-10'>Bulletin d'information géo !</h1><a class='float-right col-1' id='lang' value='fr' href='./index-en.html'>English</a>
-<i class='pl-4'>Réseau géomatique du Secteur de la statistique économique</i>
-</div>
+    cat(paste("<div class='row p-2 white border-bottom-primary'><h1 class='col-10'>Bulletin d'information géo !</h1><div class='col-12'><a class='float-right col-1' id='lang' value='fr' href='./index-en.html'>English</a>
+<i>Réseau géomatique du Secteur de la statistique économique</i>
+</div></div>
 <div>
-<p>Bienvenue à la première édition de la Bulletin d'information géo ! Conçu pour le Secteur 5 par le Laboratoire d'exploration et d'intégration des données, il vous présente environ chaque mois les dernières publications, ressources techniques, développements et applications en matière de géomatique. Le bulletin de ce mois-ci contient des ressources qui ont été conçues dans le but d'établir un lien entre le monde de la géomatique et les projets en cours à Statistique Canada. </p>
+<p>Bienvenue à la première édition de la Bulletin d'information géo ! Conçu pour le Secteur 5 par le Laboratoire d'exploration et d'intégration des données, il vous présente environ chaque mois les dernières publications, ressources techniques, développements et applications en matière de géomatique. Le bulletin de ce mois-ci contient des ressources qui ont été conçues dans le but d'établir un lien entre le monde de la géomatique et les projets en cours à Statistique Canada.</p>
 <p class='note note-primary'>Comme nous nous efforçons d'adapter ce bulletin d'information au Secteur 5, n'hésitez pas à contacter Julia Conzon ou Marina Smailes pour leur proposer des sujets/thèmes spécifiques à inclure dans les prochaines versions.
 </p>
-</div>")
+<p class='note note-warning'>La version actuelle ne fonctionne pas dans le navigateur IE par défaut, veuillez utiliser Chromium ou Teams.</p>
+</div>
+<input type='radio' id='all' name='categories' value='all' checked>
+<input type='radio' id='agriculture' name='categories' value='agriculture'>
+<input type='radio' id='environment' name='categories' value='environment'>
+<input type='radio' id='industry' name='categories' value='industry'>
+<input type='radio' id='blog' name='categories' value='blog'>
+<input type='radio' id='journal' name='categories' value='journal'>
+<input type='radio' id='news' name='categories' value='news'>
+<input type='radio' id='methods' name='categories' value='methods'>
+<input type='radio' id='visuals' name='categories' value='visuals'>
+<input type='radio' id='data' name='categories' value='data'>
+<ol class='filters'>
+<li><label for='all'>All</label></li>
+<li><label for='agriculture'>agriculture</label></li>
+<li><label for='environment'>environment</label></li>
+<li><label for='industry'>industry</label></li>
+<li><label for='blog'>blog</label></li>
+<li><label for='journal'>journal</label></li>
+<li><label for='news'>news</label></li>
+<li><label for='methods'>methods</label></li>
+<li><label for='visuals'>visuals</label></li>
+<li><label for='data'>data</label></li>
+</ol>", "<h1>Issue", issue,"</h1>"))
 }
 
-articles <- read.csv('./nov_articles.csv')
+articles <- read.csv('./nov_articles.csv', encoding="UTF-8")
 #<div class='tags col-3 text-center'>%s</div>
 template <- "
-<li class='post' data-category='%s'>
+<li class='post card' data-category='%s'>
 <article>
 <figure>
 <figcaption>
@@ -63,13 +93,15 @@ template <- "
 <a href='%s' target='_blank'>%s</a>
 </h2>
 <li>%s</li>
+<span class='float-right'>Issue: %s</span>
 </figcaption>
 </figure>
 </article>
 </li>
 "
 
-tag <- "<li><a href=''>%s</a></li>"
+tag <- "<li class='tag'>%s</li>"
+archives <- ''
 
 # iterate through rows and record for the article
 cat("<ol class='posts'>")
@@ -86,8 +118,13 @@ for (i in seq(nrow(articles))) {
       test <- paste(test, tag_elm)
     }
     list <- trimws(list, "l")
-    cat(sprintf(template, list, test, current$source, current$title, current$description))
+    if (current$issue == issue) {
+      cat(sprintf(template, list, test, current$source, current$title, current$description, current$issue))
+    } else {
+      archives <- paste(archives,sprintf(template, list, test, current$source, current$title, current$description, current$issue))
+    }
   }
 }
-cat("</ol></div>")
+cat("</ol>")
+cat(paste("<h1>Archives</h1><ol class='posts'>",archives, "</ol></div>"))
 ```
