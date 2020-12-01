@@ -10,9 +10,7 @@ setwd('C:/Tools/apache-tomcat-10.0.0-M7/webapps/geo-newsletter')
 lang <- "en"
 ```
 
-
 ```{r echo=FALSE, results='asis'}
-
 if (lang == 'en') {
     cat("<div class='row p-2 white border-bottom-primary'><h1 class='col-10'>GeoNewsletter!</h1><a class='float-right col-1' id='lang' value='en' href='./index-fr.html'>Français</a>
 <i class='pl-4'>Economic Statistics Field Geomatics Network</i>
@@ -21,7 +19,25 @@ if (lang == 'en') {
 <p>Welcome to the first edition of GeoNewsletter! Designed for Field 5 by the Data Exploration and Integration Lab, approximately each month the latest geomatics publications, technical resources, developments and applications will be delivered. This month's newsletter contains resources that were curated in effort to bridge the world of geomatics to ongoing projects at Statistics Canada.</p>
 <p class='note note-primary'>As we strive to cater this newsletter for Field 5, please feel free to reach out to Julia Conzon or Marina Smailes with specific topics/themes to include in future releases.
 </p>
-</div>")
+</div>
+<input type='radio' id='all' name='categories' value='all' checked>
+<input type='radio' id='cat' name='categories' value='cat'>
+<input type='radio' id='dog' name='categories' value='dog'>
+<input type='radio' id='horse' name='categories' value='horse'>
+<ol class='filters'>
+<li>
+<label for='all'>All</label>
+</li>
+<li>
+<label for='cat'>cat</label>
+</li>
+<li>
+<label for='dog'>dog</label>
+</li>
+<li>
+<label for='horse'>horse</label>
+</li>
+</ol>")
 } else {
     cat("<div class='row p-2 white border-bottom-primary'><h1 class='col-10'>Bulletin d'information géo !</h1><a class='float-right col-1' id='lang' value='fr' href='./index-en.html'>English</a>
 <i class='pl-4'>Réseau géomatique du Secteur de la statistique économique</i>
@@ -34,19 +50,44 @@ if (lang == 'en') {
 }
 
 articles <- read.csv('./nov_articles.csv')
-
-template <- "<div class='card mt-2'>
-<div class='card-body'>
-  <h3 class='card-title'><a href=%s target='_blank'>%s</a></h3>
-  <p class='card-text'> %s </p>
-</div></div>
+#<div class='tags col-3 text-center'>%s</div>
+template <- "
+<li class='post' data-category='%s'>
+<article>
+<figure>
+<figcaption>
+<ol class='post-categories'>
+%s
+</ol>
+<h2 class='post-title'>
+<a href='%s' target='_blank'>%s</a>
+</h2>
+<li>%s</li>
+</figcaption>
+</figure>
+</article>
+</li>
 "
 
+tag <- "<li><a href=''>%s</a></li>"
+
+# iterate through rows and record for the article
+cat("<ol class='posts'>")
 for (i in seq(nrow(articles))) {
   current <- articles[i, ]
-  if (current$lang == lang)
-    cat(sprintf(template, current$source, current$title, current$description))
+  if (current$lang == lang) {
+    tags_list <- as.list(strsplit(tolower(as.character(current$tags)), '[,]')[[1]])
+    test <- ''
+    list <- ''
+    for (i in 1:length(tags_list)) {
+      item <- trimws(tags_list[[i]][1])
+      list <- paste(list, item, sep=' ')
+      tag_elm <- sprintf(tag, item)
+      test <- paste(test, tag_elm)
+    }
+    list <- trimws(list, "l")
+    cat(sprintf(template, list, test, current$source, current$title, current$description))
+  }
 }
-
-   
+cat("</ol></div>")
 ```
