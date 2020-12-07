@@ -7,7 +7,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 setwd('C:/Tools/apache-tomcat-10.0.0-M7/webapps/geo-newsletter')
-lang <- "fr"
+lang <- "en"
 issue <- "20-Dec"
 ```
 
@@ -79,7 +79,7 @@ if (lang == 'en') {
 </ol>", "<h1>Issue", issue,"</h1>"))
 }
 
-articles <- read.csv('./nov_articles.csv', encoding="UTF-8")
+articles <- read.csv('./articles.csv', encoding="UTF-8")
 #<div class='tags col-3 text-center'>%s</div>
 template <- "
 <li class='post card' data-category='%s'>
